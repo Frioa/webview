@@ -29,6 +29,8 @@ dependencies:
 
   flutter_webview_plugin: ^0.3.11
 
+  animations: ^1.1.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
