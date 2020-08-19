@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:webview/webview/webview_community.dart';
 import 'package:webview/webview/webview_official.dart';
+import 'package:webview/widget/navigation_rail.dart';
 
 void main() => runApp(MyApp());
 
@@ -58,6 +59,19 @@ class _MyHomePageState extends State<MyHomePage> {
                   context,
                   MaterialPageRoute(
                     builder: (context) => WebViewOfficial(),
+                  ),
+                );
+              },
+            ),
+
+            // NavigationRail
+            CupertinoButton(
+              child: Text('NavigationRailWidget'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AdvancedScene(),
                   ),
                 );
               },
