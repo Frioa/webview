@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:webview/webview/customize_webview.dart';
+import 'package:webview/webview/hybrid_composition.dart';
 import 'package:webview/webview/webview_community.dart';
 import 'package:webview/webview/webview_official.dart';
 import 'package:webview/widget/android_view.dart';
@@ -98,6 +100,31 @@ class _MyHomePageState extends State<MyHomePage> {
                   context,
                   MaterialPageRoute(
                     builder: (context) => AndroidTextViewWidget(),
+                  ),
+                );
+              },
+            ),
+
+            CupertinoButton(
+              child: Text('Customize WebView'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CustomizeWebView(),
+                  ),
+                );
+              },
+            ),
+
+
+            CupertinoButton(
+              child: Text('Hybrid Composition'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HybridComposition(),
                   ),
                 );
               },

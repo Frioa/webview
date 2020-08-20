@@ -16,7 +16,7 @@ class MyTextView constructor(val context: Context, messenger: BinaryMessenger, i
     override fun getView(): View {
 //        textView.findViewById<TextView>(R.id.textView);
         textView.text = "Android 原生 TextView"
-        return LinearLayout(context).apply { findViewById<LinearLayout>(R.id.linearlayout) }
+        return textView
     }
 
     override fun dispose() {
