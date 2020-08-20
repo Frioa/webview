@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:webview/webview/webview_community.dart';
 import 'package:webview/webview/webview_official.dart';
+import 'package:webview/widget/android_view.dart';
 import 'package:webview/widget/navigation_rail.dart';
 import 'package:webview/widget/transitions_home_age.dart';
 
@@ -85,6 +86,18 @@ class _MyHomePageState extends State<MyHomePage> {
                   context,
                   MaterialPageRoute(
                     builder: (context) => TransitionsHomePage(),
+                  ),
+                );
+              },
+            ),
+
+            CupertinoButton(
+              child: Text('AndroidView-TextView'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AndroidTextViewWidget(),
                   ),
                 );
               },
