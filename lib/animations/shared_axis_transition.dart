@@ -39,6 +39,8 @@ class _SharedAxisTransitionDemoState extends State<SharedAxisTransitionDemo> {
         child: Column(
           children: <Widget>[
             Expanded(
+              /// animation : 进入离开的动画
+              /// secondaryAnimation ：淡入淡出
               child: PageTransitionSwitcher(
                 duration: const Duration(milliseconds: 300),
                 reverse: !_isLoggedIn,

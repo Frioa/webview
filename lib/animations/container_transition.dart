@@ -38,7 +38,7 @@ const String _loremIpsumParagraph =
 
 const double _fabDimension = 56.0;
 
-/// The demo page for [OpenContainerTransform].
+/// 容器变换
 class OpenContainerTransformDemo extends StatefulWidget {
   @override
   _OpenContainerTransformDemoState createState() {
@@ -290,6 +290,8 @@ class _OpenContainerWrapper extends StatelessWidget {
         return const _DetailsPage();
       },
       onClosed: onClosed,
+      //  是否可以点击整个封闭容器以打开它。
+      // 当设置为false时，只能通过调用提供给[closedBuilder]的`action`回调来打开容器。
       tappable: false,
       closedBuilder: closedBuilder,
     );

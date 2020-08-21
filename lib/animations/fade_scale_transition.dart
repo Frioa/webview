@@ -2,8 +2,9 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'package:flutter/material.dart';
 import 'package:animations/animations.dart';
+import 'package:flutter/material.dart';
+
 
 /// The demo page for [FadeScaleTransition].
 class FadeScaleTransitionDemo extends StatefulWidget {
@@ -59,6 +60,13 @@ class _FadeScaleTransitionDemoState extends State<FadeScaleTransitionDemo>
       floatingActionButton: AnimatedBuilder(
         animation: _controller,
         builder: (BuildContext context, Widget child) {
+          /// 一个实现Material淡入淡出过渡的小部件。
+          ///
+          /// 淡入淡出模式用于在屏幕范围内进入或退出的UI元素。
+          /// 输入的元素会快速淡入并从80％缩放到100％。
+          /// 退出的元素只会淡出。 比例动画仅应用于输入元素，以强调新内容而不是旧内容。
+          ///
+          /// 请勿将此小部件与Flutter的[FadeTransition]小部件混淆，该工具仅为其子小部件的不透明度设置动画。
           return FadeScaleTransition(
             animation: _controller,
             child: child,
@@ -83,6 +91,7 @@ class _FadeScaleTransitionDemoState extends State<FadeScaleTransitionDemo>
               children: <Widget>[
                 RaisedButton(
                   onPressed: () {
+                    ///
                     showModal<void>(
                       context: context,
                       builder: (BuildContext context) {
